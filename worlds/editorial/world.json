@@ -1,0 +1,20 @@
+{
+  "id": "editorial",
+  "blurb": "Warm paper, a large serif and hairline rules: a considered, publication-grade voice.",
+  "tags": ["magazine", "publishing", "writing", "newsletter", "agency", "studio", "portfolio", "journal", "media", "culture", "law", "legal", "finance", "research", "consulting", "architecture", "design", "books", "editorial"],
+  "direction": {
+    "world": "editorial",
+    "name": "Editorial Paper",
+    "thesis": "The page reads like a well-set publication: one oversized serif headline, generous margins, hairline rules and a single burnt-orange accent used sparingly.",
+    "fonts": { "display": "Instrument Serif", "text": "Geist" },
+    "palette": { "bg": "#f3efe6", "surface": "#faf7f0", "ink": "#15130f", "muted": "#6b6457", "accent": "#c2410c", "accentInk": "#ffffff", "line": "#d8d0bf" },
+    "radius": "none",
+    "density": "airy",
+    "grid": "12-column grid with wide outer margins; headline spans nine columns; supporting text sits on a narrower measure aligned to the grid, never centred.",
+    "hero": "Type-led: an oversized serif headline with the last line in italic accent, a hairline rule, then a three-part row (label, lede, action). A giant outlined wordmark crops off the bottom edge.",
+    "imagery": "Photography or illustration used large, full-bleed to a column edge, one per section, with a caption. No icon sets, no gradients.",
+    "motion": "Text and rules reveal with a short fade and a 12px rise, once. Nothing loops.",
+    "voice": "Measured and specific, written in full sentences. Dates, names and numbers instead of adjectives.",
+    "signature": "The cropped outlined wordmark along the bottom edge of the first screen."
+  }
+}

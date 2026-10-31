@@ -1,0 +1,4 @@
+node_modules/
+dist/
+.deslopify/state/
+.deslopify/review/

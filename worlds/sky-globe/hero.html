@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{brand}}</title>
+<style>
+{{fonts}}
+{{tokens}}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:var(--font-text);color:#fff;background:#0570ec;overflow:hidden;-webkit-font-smoothing:antialiased}
+.hero{position:relative;min-height:100vh;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:center;column-gap:2vw;padding:104px clamp(24px,4.4vw,72px) 24vh;isolation:isolate;overflow:hidden}
+.sky{position:absolute;inset:0;background:url({{assets}}/hero-sky.webp) center/cover;z-index:-4}
+.scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,52,160,.46) 0,rgba(3,52,160,.22) 38%,rgba(3,52,160,0) 62%);z-index:-2;pointer-events:none}
+.sun{position:absolute;top:-8%;right:11%;width:46vw;height:46vw;background:radial-gradient(circle,rgba(255,255,255,.95) 0,rgba(190,230,255,.55) 8%,rgba(120,200,255,0) 55%);z-index:-3;pointer-events:none}
+header{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;gap:40px;padding:26px clamp(24px,4.4vw,72px);z-index:5}
+.brand{font-family:var(--font-display);font-weight:800;font-size:26px;letter-spacing:-.03em;margin-right:auto}
+nav{display:flex;gap:40px;font-weight:600;font-size:17px;position:absolute;left:50%;transform:translateX(-50%)}
+nav a{color:#fff;text-decoration:none;opacity:.95}
+.top-cta{font-weight:700;font-size:16px;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.55);border-radius:var(--radius);padding:15px 24px;backdrop-filter:blur(2px)}
+.copy{position:relative;z-index:6;max-width:760px;min-width:0}
+h1{font-family:var(--font-display);font-weight:800;font-size:clamp(44px,6.1vw,100px);line-height:.96;letter-spacing:-.045em}
+h1 .line{display:block}
+h1 .line:last-child{color:#cfe6ff}
+.sub{margin-top:32px;max-width:36em;font-size:clamp(17px,1.45vw,23px);line-height:1.6;color:rgba(255,255,255,.96);text-shadow:0 1px 2px rgba(0,40,120,.35)}
+.actions{margin-top:38px;display:flex;align-items:center;gap:30px}
+.cta{font-family:var(--font-display);font-weight:700;font-size:19px;background:var(--accent);color:var(--accent-ink);border:1px solid rgba(255,255,255,.35);border-radius:var(--radius);padding:19px 28px;box-shadow:0 12px 28px -8px rgba(5,40,120,.55)}
+.earth-wrap{position:relative;z-index:2;justify-self:end;width:min(46vw,780px);aspect-ratio:1;transform:translate(2vw,-5vh)}
+.atmosphere{position:absolute;inset:-9%;border-radius:50%;background:radial-gradient(circle,rgba(0,0,0,0) 0,rgba(0,0,0,0) 54%,rgba(150,210,255,.55) 56.5%,rgba(120,190,255,.22) 62%,rgba(120,190,255,0) 72%)}
+.earth{position:absolute;inset:0;border-radius:50%;background:url({{assets}}/earth-blue-marble.webp) 81% 20%/330% auto}
+.earth::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 30% 24%,rgba(255,255,255,.34) 0,rgba(255,255,255,0) 38%),radial-gradient(circle at 62% 62%,rgba(0,12,50,0) 48%,rgba(0,12,50,.62) 100%),radial-gradient(circle at 50% 50%,rgba(0,0,0,0) 62%,rgba(150,210,255,.38) 100%)}
+.clouds{position:absolute;left:0;right:0;bottom:0;height:50%;background:url({{assets}}/hero-cloud-front.webp) center bottom/cover no-repeat;z-index:4;pointer-events:none}
+@media (max-width:767px),(max-aspect-ratio:4/5){
+  .hero{grid-template-columns:minmax(0,1fr);align-content:start;row-gap:0;padding:96px 22px 0;min-height:100vh}
+  nav,.top-cta{display:none}
+  h1{font-size:clamp(44px,13vw,64px)}
+  .sub{margin-top:20px;font-size:17px}
+  .actions{margin-top:26px}
+  .cta{font-size:17px;padding:16px 22px}
+  .earth-wrap{width:118vw;justify-self:center;margin-top:3vh;transform:translateX(8vw)}
+  .clouds{height:38%}
+}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="sky"></div>
+  <div class="sun"></div>
+  <div class="scrim"></div>
+  <header>
+    <div class="brand">{{brand}}</div>
+    <nav>{{nav}}</nav>
+    <div class="top-cta">{{cta}}</div>
+  </header>
+  <div class="copy">
+    <h1>{{headline}}</h1>
+    <p class="sub">{{sub}}</p>
+    <div class="actions"><span class="cta">{{cta}}</span></div>
+  </div>
+  <div class="earth-wrap"><div class="atmosphere"></div><div class="earth"></div></div>
+  <div class="clouds"></div>
+</section>
+</body>
+</html>

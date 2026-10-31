@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{brand}}</title>
+<style>
+{{fonts}}
+{{tokens}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-text);background:var(--bg);color:var(--ink);min-height:100vh;overflow:hidden;-webkit-font-smoothing:antialiased}
+.page{min-height:100vh;display:flex;flex-direction:column;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:calc(100% / 12) 96px;background-position:-1px -1px}
+header{display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,3vw,48px);height:64px;border-bottom:1px solid var(--line);background:var(--bg)}
+.brand{font-weight:600;font-size:20px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.brand::before{content:"";width:10px;height:10px;background:var(--accent)}
+nav{display:flex;gap:28px;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+nav a{color:inherit;text-decoration:none}
+.top-cta{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);padding:10px 14px;border-radius:var(--radius)}
+main{flex:1;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:stretch}
+.copy{padding:clamp(40px,9vh,120px) clamp(20px,3vw,48px) 48px;background:var(--bg);border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
+h1{font-weight:600;font-size:clamp(46px,6.6vw,112px);line-height:.98;letter-spacing:-.04em}
+h1 .line{display:block}
+h1 .line:not(:last-child){color:var(--muted)}
+.sub{margin-top:30px;max-width:34em;font-size:clamp(17px,1.4vw,20px);line-height:1.55;color:var(--ink)}
+.actions{margin-top:36px;display:flex;gap:16px;align-items:center}
+.cta{background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:17px;padding:16px 24px;border-radius:var(--radius)}
+.panel{position:relative;background:var(--surface);display:flex;align-items:center;justify-content:center;min-height:420px}
+.panel svg{width:min(88%,560px);height:auto;overflow:visible}
+.panel .bracket{position:absolute;width:22px;height:22px;border:1px solid var(--ink)}
+.bracket.tl{top:20px;left:20px;border-right:0;border-bottom:0}
+.bracket.tr{top:20px;right:20px;border-left:0;border-bottom:0}
+.bracket.bl{bottom:20px;left:20px;border-right:0;border-top:0}
+.bracket.br{bottom:20px;right:20px;border-left:0;border-top:0}
+.panel .tag{position:absolute;left:52px;bottom:22px;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:767px){
+  nav,.top-cta{display:none}
+  main{grid-template-columns:1fr}
+  .copy{border-right:0;border-bottom:1px solid var(--line);padding-top:44px}
+  h1{font-size:clamp(46px,14vw,70px)}
+  .panel{min-height:340px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="brand">{{brand}}</div>
+    <nav>{{nav}}</nav>
+    <div class="top-cta">{{cta}}</div>
+  </header>
+  <main>
+    <div class="copy">
+      <h1>{{headline}}</h1>
+      <p class="sub">{{sub}}</p>
+      <div class="actions"><span class="cta">{{cta}}</span></div>
+    </div>
+    <div class="panel">
+      <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+      <svg viewBox="-260 -260 520 520" fill="none" stroke="var(--line)" stroke-width="1" aria-hidden="true">
+        <circle r="250"/><circle r="190"/><circle r="130"/><circle r="70"/>
+        <path d="M-260 0H260M0-260V260" stroke="var(--muted)" stroke-opacity=".5"/>
+        <path d="M-184-184L184 184M184-184L-184 184" stroke-opacity=".6"/>
+        <g stroke="var(--muted)" stroke-opacity=".7">
+          <path d="M-250 0h-10M250 0h10M0-250v-10M0 250v10"/>
+          <path d="M-190-8v16M-130-8v16M-70-8v16M70-8v16M130-8v16M190-8v16"/>
+        </g>
+        <path d="M0 0L176 -176" stroke="var(--accent)" stroke-width="2"/>
+        <circle cx="176" cy="-176" r="6" fill="var(--accent)" stroke="none"/>
+        <circle r="3" fill="var(--ink)" stroke="none"/>
+        <path d="M0 -190A190 190 0 0 1 134 -134" stroke="var(--accent)" stroke-opacity=".5" stroke-width="2"/>
+      </svg>
+      <span class="tag">{{brand}}</span>
+    </div>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{brand}}</title>
+<style>
+{{fonts}}
+{{tokens}}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--sand:#e9c9a0;--olive:#7d8452;--sun:#e8a64f}
+body{font-family:var(--font-text);background:var(--bg);color:var(--ink);min-height:100vh;overflow:hidden;-webkit-font-smoothing:antialiased}
+.page{min-height:100vh;padding:0 clamp(24px,5vw,80px);display:flex;flex-direction:column}
+header{display:flex;align-items:center;justify-content:space-between;padding:28px 0}
+.brand{font-family:var(--font-display);font-weight:600;font-size:28px;letter-spacing:-.01em}
+nav{display:flex;gap:34px;font-size:17px;font-weight:500}
+nav a{color:inherit;text-decoration:none}
+.top-cta{font-weight:600;font-size:16px;border:1.5px solid var(--ink);padding:12px 22px;border-radius:999px}
+main{flex:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:center;column-gap:4vw;padding-bottom:6vh}
+h1{font-family:var(--font-display);font-weight:600;font-size:clamp(46px,6.2vw,104px);line-height:1;letter-spacing:-.025em}
+h1 .line{display:block}
+h1 .line:last-child{color:var(--accent);font-style:italic;font-weight:500}
+.sub{margin-top:28px;max-width:30em;font-size:clamp(18px,1.5vw,22px);line-height:1.6;color:var(--muted)}
+.actions{margin-top:36px;display:flex;gap:16px;align-items:center}
+.cta{background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:18px;padding:18px 32px;border-radius:999px}
+.art{position:relative;justify-self:end;width:min(100%,640px);aspect-ratio:1/1.08}
+.arch{position:absolute;border-radius:999px 999px 0 0}
+.a1{left:6%;bottom:0;width:58%;height:88%;background:var(--accent)}
+.a2{left:30%;bottom:0;width:48%;height:66%;background:var(--sand)}
+.a3{left:58%;bottom:0;width:36%;height:48%;background:var(--olive)}
+.a1::after{content:"";position:absolute;inset:7%;border:2px solid rgba(255,250,240,.55);border-radius:999px 999px 0 0;border-bottom:0}
+.sun{position:absolute;left:50%;top:6%;width:24%;aspect-ratio:1;background:var(--sun);border-radius:50%}
+.ground{position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--ink);border-radius:2px}
+@media (max-width:767px){
+  nav,.top-cta{display:none}
+  header{padding:22px 0}
+  main{grid-template-columns:1fr;align-content:start;row-gap:30px;padding-top:12px}
+  h1{font-size:clamp(46px,13.5vw,68px)}
+  .sub{margin-top:18px;font-size:18px}
+  .actions{margin-top:24px}
+  .art{width:92%;justify-self:center}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="brand">{{brand}}</div>
+    <nav>{{nav}}</nav>
+    <div class="top-cta">{{cta}}</div>
+  </header>
+  <main>
+    <div class="copy">
+      <h1>{{headline}}</h1>
+      <p class="sub">{{sub}}</p>
+      <div class="actions"><span class="cta">{{cta}}</span></div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <div class="sun"></div>
+      <div class="arch a3"></div><div class="arch a2"></div><div class="arch a1"></div>
+      <div class="ground"></div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

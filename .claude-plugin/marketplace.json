@@ -1,0 +1,14 @@
+{
+  "name": "deslopify",
+  "owner": {
+    "name": "DeSlopify"
+  },
+  "plugins": [
+    {
+      "name": "deslopify",
+      "source": "./",
+      "description": "Quality layer for AI coding agents: codemap, write-time guards, slop detectors and a rendered design review."
+    }
+  ],
+  "description": "DeSlopify: a quality layer that keeps AI coding agents from shipping slop."
+}

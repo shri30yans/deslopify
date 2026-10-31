@@ -1,0 +1,9 @@
+{
+  "name": "deslopify",
+  "displayName": "DeSlopify",
+  "version": "0.1.0",
+  "description": "Stops AI agents shipping slop: a codemap that prevents duplicates, write-time guards, per-edit checks, and a rendered design review against the look you chose.",
+  "author": { "name": "DeSlopify" },
+  "license": "MIT",
+  "keywords": ["code-quality", "design", "hooks", "codemap", "review"]
+}

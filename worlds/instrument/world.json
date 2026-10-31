@@ -1,0 +1,20 @@
+{
+  "id": "instrument",
+  "blurb": "Near-black surfaces, a grotesk and mono pairing, hairline grids and one amber signal.",
+  "tags": ["developer", "dev", "api", "infrastructure", "security", "ai", "data", "analytics", "software", "saas", "tool", "tools", "cli", "platform", "devtools", "cloud", "monitoring", "automation", "agent", "agents", "engineering", "hardware"],
+  "direction": {
+    "world": "instrument",
+    "name": "Dark Instrument",
+    "thesis": "A precise technical instrument: dark surfaces, hairline grids and monospace labels, with one amber signal colour reserved for the thing you should act on.",
+    "fonts": { "display": "Space Grotesk", "text": "Space Grotesk", "mono": "IBM Plex Mono" },
+    "palette": { "bg": "#0b0d10", "surface": "#12161b", "ink": "#e8ecf1", "muted": "#8d97a6", "accent": "#ffb020", "accentInk": "#0b0d10", "line": "#232a33" },
+    "radius": "sm",
+    "density": "dense",
+    "grid": "Strict 12-column grid drawn with visible 1px lines; panels align to the grid and share edges instead of floating with gaps.",
+    "hero": "Headline and action on the left; on the right a drawn instrument panel (graticule, rings, ticks) that expresses the product's mechanism. Corner brackets frame the panel.",
+    "imagery": "Diagrams, graticules and real product output, drawn in line work with the line and accent tokens. No stock photos, no 3D blobs.",
+    "motion": "A single slow sweep on the instrument panel; hover states change border colour only. Reduced motion freezes the sweep.",
+    "voice": "Terse and exact. Verbs and units. Labels in monospace, sentences in sans.",
+    "signature": "The amber sweep line crossing the instrument panel."
+  }
+}

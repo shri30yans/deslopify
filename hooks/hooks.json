@@ -1,0 +1,17 @@
+{
+  "description": "DeSlopify: context at session start, guard before writes, checks after edits, review at stop. Inert in projects without .deslopify/config.json.",
+  "hooks": {
+    "SessionStart": [
+      { "hooks": [{ "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/bin/deslopify", "args": ["hook", "session-start"], "timeout": 30 }] }
+    ],
+    "PreToolUse": [
+      { "matcher": "Write|Edit", "hooks": [{ "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/bin/deslopify", "args": ["hook", "guard"], "timeout": 15 }] }
+    ],
+    "PostToolUse": [
+      { "matcher": "Write|Edit", "hooks": [{ "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/bin/deslopify", "args": ["hook", "post-edit"], "timeout": 60 }] }
+    ],
+    "Stop": [
+      { "hooks": [{ "type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/bin/deslopify", "args": ["hook", "stop"], "timeout": 180 }] }
+    ]
+  }
+}

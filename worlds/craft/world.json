@@ -1,0 +1,20 @@
+{
+  "id": "craft",
+  "blurb": "Warm cream, terracotta and soft serif: handmade, human and hospitable.",
+  "tags": ["food", "coffee", "restaurant", "cafe", "craft", "handmade", "wellness", "home", "local", "shop", "store", "ceramics", "bakery", "hospitality", "community", "education", "family", "kids", "yoga", "health", "garden", "nonprofit"],
+  "direction": {
+    "world": "craft",
+    "name": "Warm Craft",
+    "thesis": "A welcoming, human place: cream paper, terracotta and a soft serif, with simple arches and suns drawn as flat shapes instead of stock imagery.",
+    "fonts": { "display": "Fraunces", "text": "Outfit" },
+    "palette": { "bg": "#f6ede0", "surface": "#fffaf0", "ink": "#2a1c13", "muted": "#7b6755", "accent": "#b4532a", "accentInk": "#fffaf0", "line": "#e4d3bb" },
+    "radius": "lg",
+    "density": "balanced",
+    "grid": "Two generous columns on desktop with the shape composition on the right; sections use rounded surface panels on the cream background with 24px+ padding.",
+    "hero": "Soft serif headline left; right, a composition of flat arches and a sun drawn in terracotta, sand and olive that echoes the product's character.",
+    "imagery": "Warm, natural-light photography when real photos exist; otherwise flat shape compositions in the palette. No glossy renders.",
+    "motion": "Shapes settle in with a gentle 400ms rise; buttons depress slightly on press. Reduced motion shows the final state.",
+    "voice": "Warm, first-person plural, plain words. Names of people and places over abstractions.",
+    "signature": "The stacked arch composition behind the headline's right edge."
+  }
+}

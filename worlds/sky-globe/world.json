@@ -1,0 +1,20 @@
+{
+  "id": "sky-globe",
+  "blurb": "Earth emerging from clouds on an open blue sky: trust, reach, and a clear next step.",
+  "tags": ["logistics", "shipping", "freight", "delivery", "import", "export", "travel", "airline", "global", "international", "trade", "courier", "cargo", "trust", "marketplace", "sourcing"],
+  "direction": {
+    "world": "sky-globe",
+    "name": "Sky Globe",
+    "thesis": "A bright, trustworthy service whose one big idea is a planet rising through clouds. Everything else stays calm so the globe and the headline carry the page.",
+    "fonts": { "display": "Manrope", "text": "Inter" },
+    "palette": { "bg": "#f6f9fe", "surface": "#ffffff", "ink": "#102442", "muted": "#5d7391", "accent": "#147bf5", "accentInk": "#ffffff", "line": "#dce5f0" },
+    "radius": "md",
+    "density": "balanced",
+    "grid": "Hero copy left, globe right at wide sizes; copy stacks above the globe on phones. Sections after the hero use a 12-column grid, content width 1120px, large vertical rhythm.",
+    "hero": "Full-bleed sky plate, a lit Earth that is the focal point, a foreground cloud bank along the bottom edge, white headline with the last line in a lighter tint of the sky.",
+    "imagery": "Art-directed layered plates (sky, cloud bank) plus one real-time or textured Earth. No stock photography, no icon-in-circle illustrations.",
+    "motion": "Slow globe drift and route arcs; everything else still. Reduced motion shows a static globe.",
+    "voice": "Plain, confident and concrete: what we do, for whom, what it costs. No hype words.",
+    "signature": "The Earth rising through the cloud bank, with the destination region facing the viewer."
+  }
+}
